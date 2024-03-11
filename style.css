@@ -1,0 +1,34 @@
+/* Style général de la page */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* Style du conteneur de la grille */
+.grid-container {
+    display: grid;
+    grid-gap: 5px;
+    margin-top: 20px;
+}
+
+/* Style des cellules de la grille */
+.grid-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    width: 60px;
+    height: 60px;
+}
+
+/* Styles spécifiques pour le goal, bad et wall */
+.goal {
+    background-color: #4CAF50; /* Vert pour l'objectif */
+}
+.bad {
+    background-color: #f44336; /* Rouge pour l'état pénalisant */
+}
+.wall {
+    background-color: #808080; /* Gris pour le mur */
+}

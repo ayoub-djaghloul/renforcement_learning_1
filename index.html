@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gridworld MDP Visualization</title>
+    <link rel="stylesheet" href="style.css?v=1">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 50px); /* Adaptez en fonction de n_cols */
+            grid-gap: 5px;
+            margin-top: 20px;
+        }
+        .grid-item {
+            width: 50px; /* Adaptez en fonction de la taille désirée */
+            height: 50px; /* Adaptez en fonction de la taille désirée */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+        .goal {
+            background-color: #4CAF50; /* Vert pour l'objectif */
+        }
+        .bad {
+            background-color: #f44336; /* Rouge pour l'état pénalisant */
+        }
+        .wall {
+            background-color: #808080; /* Gris pour le mur */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MDP Gridworld Visualization</h1>
+        <div id="grid-container"></div>
+            <!-- Les cellules de la grille seront générées ici par app.js -->
+        </div>
+        <button id="iterateBtn" class="btn btn-primary mt-3">Iterate</button>
+        <button id="resetBtn" class="btn btn-secondary mt-3">Reset</button>
+        <div id="iterationCount">Nombre d'itérations : 0</div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.18.1/full/pyodide.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
